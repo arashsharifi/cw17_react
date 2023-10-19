@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Blog from "./Blog";
+import frog from "../assets/a1255884a25bcb4ebc608785b7c82ab7.png"
 
 const blogsArray = [
   {
@@ -59,8 +60,10 @@ function Blogs() {
       return prevState.filter((blog) => blog.id !== id);
     });
   }
+  console.log(blogs)
   return (
     <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-3 ">
+      <img src={frog} alt="" />
       {blogs.map((blog) => {
         return (
           <Blog
